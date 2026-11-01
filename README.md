@@ -40,3 +40,11 @@
 ## Публикация на GitHub Pages
 
 Settings → Pages → Source: «Deploy from a branch», ветка `main`, папка `/ (root)`. Через минуту сайт будет доступен по адресу `https://<логин>.github.io/<репозиторий>/`.
+
+## Публикация на Railway
+
+В репозитории есть `server.js` и `package.json`, поэтому Railway собирает проект автоматически:
+
+1. New Project → Deploy from GitHub repo → выберите `winx-quiz`.
+2. После сборки откройте сервис → Settings → Networking → **Generate Domain**.
+3. Получится ссылка вида `https://winx-quiz-production.up.railway.app`, по ней и открывается викторина.
