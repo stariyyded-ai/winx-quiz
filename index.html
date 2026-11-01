@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Волшебный квиз</title>
+<title>Волшебный мир анимации</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script>
@@ -515,7 +515,7 @@ function hostRender(){
   if (H.phase === "lobby"){
     const url = joinUrl(H.code);
     app.innerHTML = `
-      <div class="center"><h1 class="big-title">✨ Волшебный квиз ✨</h1><p class="sub">Феи, ведьмочки и немного магии</p></div>
+      <div class="center"><h1 class="big-title">✨ Волшебный мир анимации ✨</h1><p class="sub">Интеллектуальная викторина</p></div>
       <div class="lobby">
         <div class="card center">
           <div class="muted" style="font-weight:900">Код комнаты</div>
@@ -579,7 +579,7 @@ function playerJoinScreen(prefCode, error){
   const saved = store.get("fq-player") || {};
   app.innerHTML = `
     <div class="center" style="max-width:440px;margin:6vh auto 0">
-      <h1 class="big-title" style="font-size:40px">✨ Волшебный квиз ✨</h1>
+      <h1 class="big-title" style="font-size:32px">✨ Волшебный мир анимации ✨</h1>
       <p class="sub">Введи код комнаты и своё имя</p>
       <div class="card" style="width:100%">
         <label for="jcode">Код комнаты</label>
@@ -681,8 +681,8 @@ function landing(){
   const saved = store.get("fq-host");
   app.innerHTML = `
     <div class="center" style="max-width:560px;margin:8vh auto 0">
-      <h1 class="big-title">✨ Волшебный квиз ✨</h1>
-      <p class="sub">Феи, ведьмочки и немного магии</p>
+      <h1 class="big-title">✨ Волшебный мир анимации ✨</h1>
+      <p class="sub">Интеллектуальная викторина</p>
       <div class="card" style="width:100%">
         <div class="row" style="flex-direction:column;gap:12px">
           <button class="btn" onclick="playerJoinScreen()">Я участница 🧚</button>
