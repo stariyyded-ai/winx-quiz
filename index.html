@@ -693,7 +693,11 @@ function landing(){
       </div>
     </div>`;
 }
-if (params.get("room")) playerJoinScreen(params.get("room"));
+if (params.get("room")){
+  const room = params.get("room").replace(/\D/g, "").slice(0, 4), sv = store.get("fq-player");
+  if (sv && sv.code === room && sv.name && sv.token){ P.code = room; P.name = sv.name; P.token = sv.token; playerConnect(); }
+  else playerJoinScreen(room);
+}
 else landing();
 </script>
 </body>
